@@ -12,6 +12,7 @@ import Login from './Component/Login/Login.jsx';
 import Register from './Component/Register/Register.jsx';
 import AuthProvider from './Context/AuthProvider.jsx';
 import Oders from './Component/Oders/Oders.jsx';
+import PrivateRoute from './Routes/PrivateRoute.jsx';
 
 
 
@@ -34,7 +35,8 @@ const router = createBrowserRouter([
       },
       {
         path:'oders',
-        Component: Oders,
+        // Component: Oders,
+        element: <PrivateRoute><Oders></Oders></PrivateRoute>
       }
 
     ]
